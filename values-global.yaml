@@ -1,6 +1,6 @@
 ---
 global:
-  pattern: multicloud-gitops
+  pattern: rhoai-ray
   options:
     useCSV: false
     syncPolicy: Automatic
@@ -10,3 +10,8 @@ main:
   multiSourceConfig:
     enabled: true
     clusterGroupChartVersion: "0.9.*"
+
+letsencrypt:
+  region: ap-southeast-1
+  email: chbutler@redhat.com
+  server: https://acme-v02.api.letsencrypt.org/directory

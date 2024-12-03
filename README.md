@@ -1,19 +1,15 @@
-# Multicloud Gitops
-
+# RHOAI Ray
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-[Live build status](https://validatedpatterns.io/ci/?pattern=mcgitops)
 
-## Start Here
+## What is this
+This is a base validated pattern to deploy RHOAI on OCP on AWS.
+It's been built for a meetup to meet minimum viable requirements based on a self managed OCP cluster on aws.
 
-If you've followed a link to this repository, but are not really sure what it contains
-or how to use it, head over to [Multicloud GitOps](https://validatedpatterns.io/patterns/multicloud-gitops/)
-for additional context and installation instructions
 
-## Rationale
+### Where should I go next if I've found this:
 
-The goal for this pattern is to:
+1. If you are interested in the ray notebooks look [here](https://github.com/butler54/rhoai-ray-notebooks)
+2. If you want to understand more about the validated pattern this is based on look [here]((https://validatedpatterns.io/patterns/multicloud-gitops/)
 
-* Use a GitOps approach to manage hybrid and multi-cloud deployments across both public and private clouds.
-* Enable cross-cluster governance and application lifecycle management.
-* Securely manage secrets across the deployment.
+
