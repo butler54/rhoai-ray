@@ -108,7 +108,14 @@ clusterGroup:
       name: letsencrypt
       namespace: letsencrypt
       project: default
-      path: common/letsencrypt
+      chart: letsencrypt
+      chartVersion: 0.1.*
+
+    data-science-cluster:
+      name: data-science-cluster
+      namespace: redhat-ods-operator
+      project: hub
+      path: charts/all/openshift-ai
 
     plumbing:
       name: plumbing
