@@ -13,6 +13,7 @@ clusterGroup:
   - openshift-serverless
   - knative-serving
   - plumbing
+  - science-project
 
   subscriptions:
     acm:
@@ -58,6 +59,7 @@ clusterGroup:
   projects:
   - hub
   - default
+  - plumbing
   # Explicitly mention the cluster-state based overrides we plan to use for this pattern.
   # We can use self-referential variables because the chart calls the tpl function with these variables defined
   sharedValueFiles:
