@@ -60,6 +60,7 @@ clusterGroup:
   - hub
   - default
   - plumbing
+  - auth
   # Explicitly mention the cluster-state based overrides we plan to use for this pattern.
   # We can use self-referential variables because the chart calls the tpl function with these variables defined
   sharedValueFiles:
@@ -124,6 +125,18 @@ clusterGroup:
       namespace: plumbing
       project: plumbing
       path: charts/all/plumbing
+
+    kueue:
+      name: kueue
+      namespace: science-project
+      project: default
+      path: charts/all/kueue
+
+    htpassword:
+      name: htpassword
+      namespace: openshift-config
+      project: auth
+      path: charts/all/htpassword
 
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
