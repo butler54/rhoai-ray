@@ -1,8 +1,8 @@
 apiVersion: "external-secrets.io/v1beta1"
 kind: ExternalSecret
 metadata:
-  name: {{ .Values.dsp.name }}-data-connnection-eso
-  namespace: {{ .Values.dsp.name }}
+  name: data-connnection-eso
+  namespace: science-project
   annotations:
     argocd.argoproj.io/sync-wave: '-10'
 spec:
@@ -11,13 +11,13 @@ spec:
     name: {{ .Values.secretStore.name }}
     kind: {{ .Values.secretStore.kind }}
   target:
-    name:  aws-connection-noobaa
+    name:  awss3
     template:
       type: Opaque
       metadata:
         annotations:
           opendatahub.io/connection-type: s3
-          openshift.io/display-name: aws-connection-noobaa
+          openshift.io/display-name: awss3
 
         labels:
           opendatahub.io/dashboard: "true"
@@ -35,9 +35,9 @@ spec:
   data:
     - secretKey: AWS_ACCESS_KEY_ID
       remoteRef:
-        key: "secret/data/pushsecrets/{{ .Values.dsp.name }}-aws-key"
-        property: AWS_ACCESS_KEY_ID
+        key: "secret/data/global/s3"
+        property: aws_access_key_id
     - secretKey: AWS_SECRET_ACCESS_KEY
       remoteRef:
-        key: "secret/data/pushsecrets/{{ .Values.dsp.name }}-aws-key"
-        property: AWS_SECRET_ACCESS_KEY
+        key: "secret/data/global/s3"
+        property: aws_secret_access_key

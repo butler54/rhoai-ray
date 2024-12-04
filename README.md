@@ -13,3 +13,6 @@ It's been built for a meetup to meet minimum viable requirements based on a self
 2. If you want to understand more about the validated pattern this is based on look [here]((https://validatedpatterns.io/patterns/multicloud-gitops/)
 
 
+
+## Todos
+- Use ack to provision s3 bucket
