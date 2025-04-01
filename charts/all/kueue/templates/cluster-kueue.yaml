@@ -9,7 +9,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "10"
 spec:
   namespaceSelector: {}  # match all.
-  cohort: "team-ab" # allow borrowing of resources from team-b
+  cohort: "team-ds" # allow borrowing of resources from team-b
   preemption:
     reclaimWithinCohort: Any
   resourceGroups:

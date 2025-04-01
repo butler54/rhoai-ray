@@ -7,4 +7,4 @@ metadata:
   annotations:
     openshift.io/description: 'RHOAI llm demo project'
     openshift.io/display-name: science-project
-spec: {}
+spec:

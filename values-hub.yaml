@@ -19,13 +19,13 @@ clusterGroup:
     acm:
       name: advanced-cluster-management
       namespace: open-cluster-management
-      channel: release-2.12
+      channel: release-2.13.1
       #csv: advanced-cluster-management.v2.6.1
     rhoai:
       name: rhods-operator
       # Fast is required for 2.9.0
       channel: fast
-      version: "2.13.1" # ensure we get the latest
+      version: "2.16.2" # ensure we get the latest
       namespace: openshift-operators
 
     openshift-pipelines:
@@ -54,7 +54,7 @@ clusterGroup:
     authorino:
       name: authorino-operator
       namespace: openshift-operators
-      channel: tech-preview-v1
+      channel: stable
 
   projects:
   - hub
